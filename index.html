@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>1020 HTML Template by Colorlib</title>
+    <title></title>
 
     <!-- Google font -->
     <link
@@ -18,52 +18,128 @@
       body {
         margin: 0;
         padding: 0;
-        min-height: 100vh;
         background-color: rgb(17, 26, 65);
+        overflow: hidden;
       }
       .container {
         display: flex;
         flex-direction: column;
         align-items: center;
       }
+
+      /* Position text in the middle of the page/image */
+      .bg-text {
+        background-color: rgb(17, 26, 65); /* Fallback color */
+        background-color: rgba(17, 26, 65, 0.9); /* Black w/opacity/see-through */
+        color: white;
+        font-weight: bold;
+        border: 3px solid rgb(17, 26, 65);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        width: 50%;
+        padding: 20px;
+        text-align: center;
+        border-radius: 8px;
+      }
       h2 {
         text-align: center;
         letter-spacing: 0.3px;
-        font-family: "Inter";
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         font-style: normal;
         font-weight: 600;
-        font-size: 25px;
-        line-height: 18px;
+        font-size: 32px;
+        line-height: 21px;
         user-select: none;
         color: #fff;
       }
       h3 {
         text-align: center;
         letter-spacing: 0.3px;
-        font-family: "Inter";
         font-style: normal;
-        font-weight: 600;
+        font-weight: 550;
         font-size: 25px;
         line-height: 27px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         user-select: none;
-        color: #fff;
+        color: rgb(201, 201, 201);
         margin-top: 32px;
         padding: 10px;
+      }
+
+      .bg-image {
+        /* Add the blur effect */
+        /* filter: blur(8px);
+        -webkit-filter: blur(8px); */
+
+        /* Full height */
+        width: 100%;
+
+        /* Center and scale the image nicely */
+        /* background-position: center; */
+        /* background-repeat: no-repeat;
+        background-size: cover; */
+      }
+      @media screen and (max-width: 1300px) {
+        .bg-image{
+          display: none;
+        }
+      }
+
+      .bg-image-mob {
+        /* Add the blur effect */
+        /* filter: blur(8px);
+        -webkit-filter: blur(8px); */
+
+        /* Full height */
+        width: 100%;
+
+        /* Center and scale the image nicely */
+        /* background-position: center; */
+        /* background-repeat: no-repeat;
+        background-size: cover; */
+      }
+      @media screen and (min-width: 1299px) {
+        .bg-image-mob{
+          display: none;
+        }
+      }
+
+      .bg-xxx {
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(107, 110, 124, 0.4); /* Black w/opacity/see-through */
+        color: white;
+        font-weight: bold;
+        position: absolute;
+        top: 0%;
+        bottom:  0%;
+        top: 0%;
+        right: 0%;
+        transform: translate(0%, 0%);
+        width: 100%;
+        text-align: center;
       }
     </style>
   </head>
 
   <body>
     <div class="container">
-      <img src="Flush_Icon_white.svg" height="320" width="320" />
-      <h2>Sorry &#128531;</h2>
-      <h3>
-        Unfortunately Flush isn’t yet available in your region due to our gaming
-        license.
-      </h3>
-    </div>
+      <img class="bg-image" src="./desktop.svg"/>
+      <img class="bg-image-mob" src="./mob.png"/>
+      <img class="bg-image-mob" src="./footer_mob.png" style="position: absolute; bottom: 0px; width: 100%; margin-bottom: -8px;"/>
+
+        <div class="bg-text">
+          <img src="Flush_Icon_white.svg" height="100" width="100" />
+          <h2>Sorry &#128531;</h2>
+          <h3>
+            Unfortunately Flush isn’t yet available in your region due to our gaming
+            license.
+          </h3>
+        </div>
+      </div>
+
+    <div class="bg-xxx"></div>
   </body>
-  <body> 
-     ::CLOUDFLARE_ERROR_1000S_BOX::
-   </body>
 </html>
